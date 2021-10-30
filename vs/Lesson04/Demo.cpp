@@ -30,6 +30,7 @@ void Demo::DeInit() {
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
+
 }
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
@@ -109,7 +110,7 @@ void Demo::ProcessInput(GLFWwindow *window) {
 }
 
 void Demo::Update(double deltaTime) {
-	
+	angle += (float)((deltaTime * 1.5f) / 1000);
 }
 
 void Demo::Render() {
@@ -431,6 +432,17 @@ void Demo::DrawColoredCube()
 
 	glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
+
+	glm::mat4 model;
+	model = glm::translate(model, glm::vec3(0, 2, 0));
+
+	model = glm::rotate(model, angle, glm::vec3(0, -1, 1));
+
+	model = glm::scale(model, glm::vec3(2, 2, 2));
+
+	GLint modelLoc = glGetUniformLocation(this->shaderProgram, "model");
+	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
 	glDrawElements(GL_TRIANGLES, 180, GL_UNSIGNED_INT, 0);
 
 	glBindTexture(GL_TEXTURE_2D, 0);
@@ -502,6 +514,10 @@ void Demo::DrawColoredPlane()
 
 	glBindVertexArray(VAO2); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 
+	glm::mat4 model;
+	GLint modelLoc = glGetUniformLocation(this->shaderProgram, "model");
+	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	glBindTexture(GL_TEXTURE_2D, 0);
@@ -561,5 +577,5 @@ void Demo::RotateCamera(float speed)
 
 int main(int argc, char** argv) {
 	RenderEngine &app = Demo();
-	app.Start("Camera: Free Camera Implementation", 800, 600, false, false);
+	app.Start("Camera & Transformation", 800, 600, false, false);
 }

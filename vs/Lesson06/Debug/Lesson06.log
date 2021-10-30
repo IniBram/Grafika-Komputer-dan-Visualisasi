@@ -1,1 +1,7 @@
-﻿
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Lesson02.vcxproj, Lesson03.vcxproj, Lesson04.vcxproj, Lesson05.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  glad.c
+  Demo.cpp
+  RenderEngine.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Lesson06.vcxproj -> E:\Tasks\GRAFKOM\Grafika Komputer dan Visualisasi-20210924T125237Z-001\Grafika Komputer dan Visualisasi\vs\Debug\Lesson06.exe
