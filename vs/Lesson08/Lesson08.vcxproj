@@ -142,6 +142,11 @@
     <Image Include="crate_specularmap.png" />
     <Image Include="marble_diffusemap.png" />
     <Image Include="marble_specularmap.png" />
+    <Image Include="woodgrain_diffuse.jpg" />
+    <Image Include="woodgrain_specular.jpg" />
+    <Image Include="wood_hr.jpg" />
+    <Image Include="wood_hr_normal.jpg" />
+    <Image Include="wood_specular.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

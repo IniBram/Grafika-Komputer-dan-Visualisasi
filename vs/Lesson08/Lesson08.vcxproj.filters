@@ -57,5 +57,20 @@
     <Image Include="..\Lesson04\acacia_planks.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="woodgrain_diffuse.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="woodgrain_specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wood_specular.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wood_hr.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wood_hr_normal.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
