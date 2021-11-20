@@ -34,9 +34,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="coloredCube.frag">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="coloredCube.vert">
       <Filter>Resource Files</Filter>
     </None>
@@ -44,6 +41,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="texturedCube.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="coloredCube.frag">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

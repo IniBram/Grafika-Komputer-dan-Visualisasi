@@ -54,5 +54,8 @@
     <Image Include="marble_specularmap.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\Lesson04\acacia_planks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
