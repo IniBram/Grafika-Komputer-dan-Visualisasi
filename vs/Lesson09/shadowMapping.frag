@@ -37,9 +37,11 @@ void main()
 {           
     vec3 color = texture(diffuseTexture, fs_in.TexCoords).rgb;
     vec3 normal = normalize(fs_in.Normal);
-    vec3 lightColor = vec3(0.5);
+    vec3 lightColor = vec3(0.18275, 0.17, 0.22525);
+    vec3 lightColor2 = vec3(0.332741, 0.328634, 0.346435);
     // ambient
-    vec3 ambient = 0.3 * color;
+    float ambientStrength = 0.4;
+    vec3 ambient = ambientStrength * color;
 
     // diffuse
     vec3 lightDir = normalize(lightPos - fs_in.FragPos);
@@ -51,7 +53,7 @@ void main()
     vec3 reflectDir = reflect(-lightDir, normal);
     float spec = 0.0;
     spec = pow(max(dot(viewDir, reflectDir), 0.0), 64.0);
-    vec3 specular = spec * lightColor;    
+    vec3 specular = spec * lightColor2;    
     
 	// calculate shadow
     float shadow = ShadowCalculation(fs_in.FragPosLightSpace);                      

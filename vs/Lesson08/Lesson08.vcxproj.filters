@@ -72,5 +72,8 @@
     <Image Include="wood_hr_normal.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="body.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

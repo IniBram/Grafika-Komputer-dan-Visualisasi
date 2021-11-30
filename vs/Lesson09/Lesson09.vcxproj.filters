@@ -54,5 +54,11 @@
     <Image Include="wood.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="wood_grain.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="body.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

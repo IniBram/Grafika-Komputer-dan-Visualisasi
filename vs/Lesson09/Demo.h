@@ -15,6 +15,8 @@ public:
 private:
 	GLuint depthmapShader, shadowmapShader, cubeVBO, cubeVAO, cubeEBO, cube_texture, planeVBO, planeVAO, planeEBO, plane_texture, stexture, stexture2, depthMapFBO, depthMap;
 	const unsigned int SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
+	float viewCamX, viewCamY, viewCamZ, upCamX, upCamY, upCamZ, posCamX, posCamY, posCamZ, CAMERA_SPEED, fovy;
+	float angle = 0;
 	virtual void Init();
 	virtual void DeInit();
 	virtual void Update(double deltaTime);
@@ -26,5 +28,9 @@ private:
 	void DrawTexturedPlane(GLuint shader);
 	void BuildDepthMap();
 	void BuildShaders();
+	void MoveCamera(float speed);
+	void StrafeCamera(float speed);
+	void RotateCamera(float speed);
+	void InitCamera();
 };
 
